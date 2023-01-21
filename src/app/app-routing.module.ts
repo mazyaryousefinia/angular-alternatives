@@ -4,6 +4,11 @@ import { RouterModule, Routes } from '@angular/router';
 const routes: Routes = [
 
   {
+    path: '',
+    redirectTo: '/subscription',
+    pathMatch: 'full'
+  },
+  {
     path: 'subscription',
     loadChildren: () => import('./modules/subscription/subscription.module').then(m => m.SubscriptionModule)
   },
@@ -19,6 +24,10 @@ const routes: Routes = [
     path: 'view-model',
     loadChildren: () => import('./modules/view-model/view-model.module').then(m => m.ViewModelModule)
   }
+
+
+
+
 
 ];
 
